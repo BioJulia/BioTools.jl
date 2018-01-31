@@ -18,6 +18,7 @@ before_install:
       brew tap homebrew/science;
       brew update;
       brew install blast;
+      brew link --overwrite blast;
     fi
 
 after_success:
