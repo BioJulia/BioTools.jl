@@ -6,7 +6,7 @@ using BioSequences,
       BioTools.BLAST
 
 import BioCore.Testing:
-    get_bio_fmt_specimens()
+    get_bio_fmt_specimens
 
 fmtdir = get_bio_fmt_specimens()
 
