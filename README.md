@@ -36,7 +36,7 @@ the master branch to try new features before release.
 
 We appreciate contributions from users including reporting bugs, fixing issues,
 improving performance and adding new features.
-Please go to the [contributing section of the documentation](biojulia.github.io/BioTools.jl/stable/contributing)
+Please go to the [contributing section of the documentation](https://biojulia.github.io/BioTools.jl/stable/contributing)
 for more information.
 
 If you have a question about
