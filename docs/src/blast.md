@@ -1,5 +1,5 @@
 ```@meta
-CurrentModule = Bio.Tools.BLAST
+CurrentModule = BioTools.BLAST
 ```
 
 # The BioTools BLAST wrapper

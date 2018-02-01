@@ -4,7 +4,9 @@ makedocs(
     format = :html,
     sitename = "BioTools.jl",
     pages = [
-        "Home" => "index.md"
+        "Home" => "index.md",
+        "BLAST" => "blast.md",
+        "Contributing" => "contributing.md"
     ],
     authors = "The BioJulia Organisation and other contributors."
 )
