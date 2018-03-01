@@ -13,7 +13,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "BioTools.jl",
     "category": "section",
-    "text": "Latest release:(Image: Latest Release) (Image: BioTools) (Image: License) (Image: ) (Image: BioJulia maintainer: kescobo)Development status: (Image: Build Status) (Image: Build status) (Image: codecov) (Image: )"
+    "text": "Release Documentation Maintainers\n(Image: ) (Image: ) (Image: ) (Image: ) (Image: )Latest release:(Image: Latest Release) (Image: BioTools) (Image: License) (Image: ) (Image: BioJulia maintainer: kescobo)Development status: (Image: Build Status) (Image: Build status) (Image: codecov) (Image: )"
 },
 
 {
@@ -29,7 +29,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Installation",
     "category": "section",
-    "text": "Install BioTools from the Julia REPL:julia> Pkg.add(\"BioTools\")If you are interested in the cutting edge of the development, please check out the master branch to try new features before release."
+    "text": "Install BioTools from the Julia REPL:using Pkg\nadd(\"BioTools\")\n# Pkg.add(\"BioTools\") for julia v0.6-If you are interested in the cutting edge of the development, please check out the master branch to try new features before release."
+},
+
+{
+    "location": "index.html#Testing-1",
+    "page": "Home",
+    "title": "Testing",
+    "category": "section",
+    "text": "BioTools.jl is tested against Julia 0.6 and current 0.7-dev on Linux, OS X, and Windows.PackageEvaluator Latest Build Status\n(Image: ) (Image: ) (Image: ) (Image: ) (Image: )"
 },
 
 {
