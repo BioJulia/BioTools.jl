@@ -29,24 +29,24 @@ function readblastXML(blastrun::AbstractString; seqtype="nucl")
     rt = EzXML.root(dc)
     results = BLASTResult[]
     for iteration in find(rt, "/BlastOutput/BlastOutput_iterations/Iteration")
-        queryname = EzXML.content(findfirst(iteration, "Iteration_query-def"))
+        queryname = EzXML.nodecontent(findfirst(iteration, "Iteration_query-def"))
         for hit in find(iteration, "Iteration_hits")
             if EzXML.countelements(hit) > 0
-                hitname = EzXML.content(findfirst(hit, "./Hit/Hit_def"))
+                hitname = EzXML.nodecontent(findfirst(hit, "./Hit/Hit_def"))
                 hsps = findfirst(hit, "./Hit/Hit_hsps")
                 if seqtype == "nucl"
-                    qseq = DNASequence(EzXML.content(findfirst(hsps, "./Hsp/Hsp_qseq")))
-                    hseq = DNASequence(EzXML.content(findfirst(hsps, "./Hsp/Hsp_hseq")))
+                    qseq = DNASequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_qseq")))
+                    hseq = DNASequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_hseq")))
                 elseif seqtype == "prot"
-                    qseq = AminoAcidSequence(EzXML.content(findfirst(hsps, "./Hsp/Hsp_qseq")))
-                    hseq = AminoAcidSequence(EzXML.content(findfirst(hsps, "./Hsp/Hsp_hseq")))
+                    qseq = AminoAcidSequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_qseq")))
+                    hseq = AminoAcidSequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_hseq")))
                 else
                     throw(error("Please use \"nucl\" or \"prot\" for seqtype"))
                 end
 
                 aln = AlignedSequence(qseq, hseq)
-                bitscore = float(EzXML.content(findfirst(hsps, "./Hsp/Hsp_bit-score")))
-                expect = float(EzXML.content(findfirst(hsps, "./Hsp/Hsp_evalue")))
+                bitscore = float(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_bit-score")))
+                expect = float(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_evalue")))
                 push!(results, BLASTResult(bitscore, expect, queryname, hitname, hseq, aln))
             end
         end

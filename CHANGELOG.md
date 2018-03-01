@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.1.0](https://github.com/BioJulia/BioTools.jl/tree/0.1.0) (**01-02-2018**)
+## [v0.1.0](https://github.com/BioJulia/BioTools.jl/tree/v0.1.0) (**20-02-2018**)
 **Merged pull requests:**
 
 - Readme and docs [\#2](https://github.com/BioJulia/BioTools.jl/pull/2) ([Ward9250](https://github.com/Ward9250))
