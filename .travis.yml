@@ -16,7 +16,7 @@ matrix:
 notifications:
   email: false
 
-before_install:
+after_install:
   - if [ `uname` = "Linux" ]; then
       sudo apt-get -qq update;
       sudo apt-get install -y ncbi-blast+;
