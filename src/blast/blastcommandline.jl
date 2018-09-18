@@ -6,7 +6,7 @@
 # This file is a part of BioJulia.
 # License is MIT: https://github.com/BioJulia/Bio.jl/blob/master/LICENSE.md
 
-immutable BLASTResult
+struct BLASTResult
     bitscore::Float64
     expect::Float64
     queryname::String
@@ -28,25 +28,25 @@ function readblastXML(blastrun::AbstractString; seqtype="nucl")
     dc = EzXML.parsexml(blastrun)
     rt = EzXML.root(dc)
     results = BLASTResult[]
-    for iteration in find(rt, "/BlastOutput/BlastOutput_iterations/Iteration")
-        queryname = EzXML.nodecontent(findfirst(iteration, "Iteration_query-def"))
-        for hit in find(iteration, "Iteration_hits")
+    for iteration in findall("/BlastOutput/BlastOutput_iterations/Iteration", rt)
+        queryname = EzXML.nodecontent(findfirst("Iteration_query-def", iteration))
+        for hit in findall("Iteration_hits", iteration)
             if EzXML.countelements(hit) > 0
-                hitname = EzXML.nodecontent(findfirst(hit, "./Hit/Hit_def"))
-                hsps = findfirst(hit, "./Hit/Hit_hsps")
+                hitname = EzXML.nodecontent(findfirst("./Hit/Hit_def", hit))
+                hsps = findfirst("./Hit/Hit_hsps", hit)
                 if seqtype == "nucl"
-                    qseq = DNASequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_qseq")))
-                    hseq = DNASequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_hseq")))
+                    qseq = DNASequence(EzXML.nodecontent(findfirst("./Hsp/Hsp_qseq", hsps)))
+                    hseq = DNASequence(EzXML.nodecontent(findfirst("./Hsp/Hsp_hseq", hsps)))
                 elseif seqtype == "prot"
-                    qseq = AminoAcidSequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_qseq")))
-                    hseq = AminoAcidSequence(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_hseq")))
+                    qseq = AminoAcidSequence(EzXML.nodecontent(findfirst("./Hsp/Hsp_qseq", hsps)))
+                    hseq = AminoAcidSequence(EzXML.nodecontent(findfirst("./Hsp/Hsp_hseq", hsps)))
                 else
                     throw(error("Please use \"nucl\" or \"prot\" for seqtype"))
                 end
 
                 aln = AlignedSequence(qseq, hseq)
-                bitscore = float(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_bit-score")))
-                expect = float(EzXML.nodecontent(findfirst(hsps, "./Hsp/Hsp_evalue")))
+                bitscore = parse(Float64, EzXML.nodecontent(findfirst("./Hsp/Hsp_bit-score", hsps)))
+                expect = parse(Float64, EzXML.nodecontent(findfirst("./Hsp/Hsp_evalue", hsps)))
                 push!(results, BLASTResult(bitscore, expect, queryname, hitname, hseq, aln))
             end
         end
@@ -64,7 +64,7 @@ readblastXML(blastresults)
 Returns Vector{BLASTResult} with the sequence of the hit, the Alignment with query sequence, bitscore and expect value
 """
 function readblastXML(blastrun::Cmd; seqtype="nucl")
-    return readblastXML(readstring(blastrun), seqtype=seqtype)
+    return readblastXML(read(blastrun, String), seqtype=seqtype)
 end
 
 
@@ -157,7 +157,7 @@ function makefasta(sequence::BioSequence)
 end
 
 # Create temporary multi fasta-formated file for blasting.
-function makefasta{T <: BioSequence}(sequences::Vector{T})
+function makefasta(sequences::Vector{T}) where T <: BioSequence
     path, io = mktemp()
     counter = 1
     for sequence in sequences
@@ -167,5 +167,3 @@ function makefasta{T <: BioSequence}(sequences::Vector{T})
     close(io)
     return path
 end
-
-
