@@ -1,10 +1,13 @@
 name = "BioTools"
 uuid = "6631239a-b2a9-11e8-0104-a58b323c83c6"
 authors = ["Ben Ward <email>"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
 BioCore = "37cfa864-2cd6-5c12-ad9e-b6597d696c81"
 BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
 EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
+
+[compat]
+julia = "0.7"
