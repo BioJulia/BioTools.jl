@@ -1,13 +1,13 @@
 language: julia
 
 os:
-  # - linux
+  - linux
   - osx
 
 julia:
   - 0.7
-  # - 1.0
-  # - nightly
+  - 1.0
+  - nightly
 
 matrix:
   allow_failures:
