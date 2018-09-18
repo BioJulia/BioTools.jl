@@ -1,13 +1,13 @@
 language: julia
 
 os:
-  - linux
+  # - linux
   - osx
 
 julia:
   - 0.7
-  - 1.0
-  - nightly
+  # - 1.0
+  # - nightly
 
 matrix:
   allow_failures:
@@ -21,10 +21,10 @@ before_install:
       sudo apt-get -qq update;
       sudo apt-get install -y ncbi-blast+;
     elif [ `uname` = "Darwin" ]; then
-      brew tap homebrew/science;
-      brew update;
-      brew install blast;
-      brew link --overwrite blast;
+      curl https://repo.continuum.io/miniconda/Miniconda3-4.5.11-MacOSX-x86_64.sh > ~/miniconda.sh;
+      bash ~/miniconda.sh -b -p $HOME/miniconda;
+      export PATH="$HOME/miniconda/bin:$PATH";
+      conda install blast -c bioconda;
     fi
 
 after_success:
