@@ -21,7 +21,7 @@ version = "0.4.2"
 
 [[BioAlignments]]
 deps = ["Automa", "BGZFStreams", "BioCore", "BioSequences", "BioSymbols", "BufferedStreams", "GenomicFeatures", "IntervalTrees", "LinearAlgebra", "Printf", "Test"]
-git-tree-sha1 = "cec4414454c5ceb74fd9687f93db5c5e9035294b"
+git-tree-sha1 = "ba40677e9c67c38af7ceec325f23b3052129d5dd"
 repo-rev = "master"
 repo-url = "https://github.com/BioJulia/BioAlignments.jl.git"
 uuid = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
