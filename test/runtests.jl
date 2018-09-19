@@ -1,6 +1,6 @@
 module TestTools
 
-using Base.Test
+using Test
 
 using BioSequences,
       BioTools.BLAST
@@ -10,7 +10,7 @@ import BioCore.Testing:
 
 fmtdir = get_bio_fmt_specimens()
 
-if !is_windows()  # temporarily disable the BLAST tests on Windows (issue: #197)
+if !Sys.iswindows()  # temporarily disable the BLAST tests on Windows (issue: #197)
 
 @testset "BLAST+ blastn" begin
     na1 = dna"""

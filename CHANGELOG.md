@@ -1,4 +1,6 @@
 # Change Log
+## [UNRELEASED] (**18-09-2018**)
+- adds support to Julia 1.0
 
 ## [v0.1.0](https://github.com/BioJulia/BioTools.jl/tree/v0.1.0) (**20-02-2018**)
 **Merged pull requests:**
