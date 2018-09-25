@@ -43,7 +43,7 @@ using the original query as a reference and some additional information
 (expect vaue, bitscore) for the hit.
 
 ```julia
-immutable BLASTResult
+struct BLASTResult
     bitscore::Float64
     expect::Float64
     queryname::String

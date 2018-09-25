@@ -19,7 +19,7 @@ end
     readblastXML(blastrun::AbstractString)
 Parse XML output of a blast run. Input is an XML string eg:
 ```julia
-results = readstring(open("blast_results.xml"))
+results = read(open("blast_results.xml"), String)
 readblastXML(results)
 ```
 Returns Vector{BLASTResult} with the sequence of the hit, the Alignment with query sequence, bitscore and expect value
