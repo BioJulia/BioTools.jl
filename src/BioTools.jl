@@ -1,5 +1,3 @@
-__precompile__()
-
 module BioTools
 
 include("blast/BLAST.jl")
