@@ -1,29 +1,14 @@
-# BioTools.jl
+# <img src="./sticker.svg" width="30%" align="right" /> BioTools
 
-| **Release**                                                     | **Documentation**                                                               | **Maintainers**                             |
-|:---------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:-------------------------------------------:|
-| [![](https://img.shields.io/github/release/BioJulia/BioTools.jl.svg)](https://github.com/BioJulia/BioTools.jl/releases/latest) [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/BioJulia/BioTools.jl/blob/master/LICENSE) | [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://biojulia.github.io/BioTools.jl/stable) [![](https://img.shields.io/badge/docs-latest-blue.svg)](https://biojulia.github.io/BioTools.jl/latest) | ![](https://img.shields.io/badge/BioJulia%20Maintainer-Ward9250-orange.svg) |
-
-**Latest release:**
-
-[![Latest Release](https://img.shields.io/github/release/BioJulia/BioTools.jl.svg)](https://github.com/BioJulia/BioTools.jl/releases/latest)
-[![BioTools](http://pkg.julialang.org/badges/BioTools_0.6.svg)](http://pkg.julialang.org/?pkg=BioTools)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/BioJulia/BioTools.jl/blob/master/LICENSE)
-[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://biojulia.github.io/BioTools.jl/stable)
-![BioJulia maintainer: kescobo](https://img.shields.io/badge/BioJulia%20Maintainer-kescobo-orange.svg)
-
-**Development status:**
-[![Build Status](https://travis-ci.org/BioJulia/BioTools.jl.svg?branch=master)](https://travis-ci.org/BioJulia/BioTools.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/j9ikh4s0914ke29b/branch/master?svg=true)](https://ci.appveyor.com/project/Ward9250/biotools-jl/branch/master)
-[![codecov](https://codecov.io/gh/BioJulia/BioTools.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/BioJulia/BioTools.jl)
-[![](https://img.shields.io/badge/docs-latest-blue.svg)](https://biojulia.github.io/BioTools.jl/latest)
-
+ [![Latest Release](https://img.shields.io/github/release/BioJulia/BioTools.jl.svg)](https://github.com/BioJulia/BioTools.jl/releases/latest)
+ [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/BioJulia/BioTools.jl/blob/master/LICENSE)
+ [![Stable documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://biojulia.github.io/BioTools.jl/stable)
+ [![Latest documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://biojulia.github.io/BioTools.jl/latest)
 
 ## Description
 
-BioTools.jl provides DNA, RNA and amino acid sequence data types for the
-julia language, with a comprehensive set of methods for common operations and
-IO of major sequence data formats.
+BioTools provides interfaces to common external biological tools from julia scripts
+and programs.
 
 ## Installation
 
@@ -38,25 +23,59 @@ add("BioTools")
 If you are interested in the cutting edge of the development, please check out
 the master branch to try new features before release.
 
-
 ## Testing
 
-BioTools.jl is tested against Julia `0.6` and current `0.7-dev` on Linux, OS X, and Windows.
+BioTools is tested against Julia `0.7` and current `1.X` on Linux, OS X, and Windows.
 
 | **PackageEvaluator**                                            | **Latest Build Status**                                                                                |
 |:---------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------:|
 | [![](https://pkg.julialang.org/badges/BioTools_0.6.svg)](https://pkg.julialang.org/detail/BioTools) [![](https://pkg.julialang.org/badges/BioTools_0.7.svg)](https://pkg.julialang.org/detail/BioTools) | [![](https://img.shields.io/travis/BioJulia/BioTools.jl/master.svg?label=Linux+/+macOS)](https://travis-ci.org/BioJulia/BioTools.jl) [![](https://ci.appveyor.com/api/projects/status/j9ikh4s0914ke29b?svg=true)](https://ci.appveyor.com/project/Ward9250/biotools-jl/branch/master) [![](https://codecov.io/gh/BioJulia/BioTools.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/BioJulia/BioTools.jl) |
 
+## Contributing
+
+We appreciate contributions from users including reporting bugs, fixing
+issues, improving performance and adding new features.
+
+Take a look at the [CONTRIBUTING](CONTRIBUTING.md) file provided with
+every BioJulia package package for detailed contributor and maintainer
+guidelines.
 
 
-## Contributing and Questions
+### Financial contributions
 
-We appreciate contributions from users including reporting bugs, fixing issues,
-improving performance and adding new features.
-Please go to the [contributing section of the documentation](https://biojulia.net/Contributing/latest)
-for more information.
+We also welcome financial contributions in full transparency on our
+[open collective](https://opencollective.com/biojulia).
+Anyone can file an expense. If the expense makes sense for the development
+of the community, it will be "merged" in the ledger of our open collective by
+the core contributors and the person who filed the expense will be reimbursed.
 
-If you have a question about
-contributing or using this package, you are encouraged to use the
-[Bio category of the Julia discourse
-site](https://discourse.julialang.org/c/domain/bio).
+
+## Backers & Sponsors
+
+Thank you to all our backers and sponsors!
+
+Love our work and community? [Become a backer](https://opencollective.com/biojulia#backer).
+
+[![backers](https://opencollective.com/biojulia/backers.svg?width=890)](https://opencollective.com/biojulia#backers)
+
+Does your company use BioJulia? Help keep BioJulia feature rich and healthy by
+[sponsoring the project](https://opencollective.com/biojulia#sponsor)
+Your logo will show up here with a link to your website.
+
+[![](https://opencollective.com/biojulia/sponsor/0/avatar.svg)](https://opencollective.com/biojulia/sponsor/0/website)
+[![](https://opencollective.com/biojulia/sponsor/1/avatar.svg)](https://opencollective.com/biojulia/sponsor/1/website)
+[![](https://opencollective.com/biojulia/sponsor/2/avatar.svg)](https://opencollective.com/biojulia/sponsor/2/website)
+[![](https://opencollective.com/biojulia/sponsor/3/avatar.svg)](https://opencollective.com/biojulia/sponsor/3/website)
+[![](https://opencollective.com/biojulia/sponsor/4/avatar.svg)](https://opencollective.com/biojulia/sponsor/4/website)
+[![](https://opencollective.com/biojulia/sponsor/5/avatar.svg)](https://opencollective.com/biojulia/sponsor/5/website)
+[![](https://opencollective.com/biojulia/sponsor/6/avatar.svg)](https://opencollective.com/biojulia/sponsor/6/website)
+[![](https://opencollective.com/biojulia/sponsor/7/avatar.svg)](https://opencollective.com/biojulia/sponsor/7/website)
+[![](https://opencollective.com/biojulia/sponsor/8/avatar.svg)](https://opencollective.com/biojulia/sponsor/8/website)
+[![](https://opencollective.com/biojulia/sponsor/9/avatar.svg)](https://opencollective.com/biojulia/sponsor/9/website)
+
+
+## Questions?
+
+If you have a question about contributing or using BioJulia software, come
+on over and chat to us on [Discord](https://discord.gg/z73YNFz), or you can try the
+[Bio category of the Julia discourse site](https://discourse.julialang.org/c/domain/bio).

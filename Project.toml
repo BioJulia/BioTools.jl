@@ -1,6 +1,6 @@
 name = "BioTools"
 uuid = "6631239a-b2a9-11e8-0104-a58b323c83c6"
-authors = ["Ben Ward <email>"]
+authors = ["Ben J. Ward <ward9250@gmail.com>"]
 version = "0.2.0"
 
 [deps]
