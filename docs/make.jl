@@ -5,15 +5,14 @@ makedocs(
     sitename = "BioTools.jl",
     pages = [
         "Home" => "index.md",
-        "BLAST" => "blast.md",
-        "Contributing" => "contributing.md"
+        "BLAST" => "blast.md"
     ],
     authors = "The BioJulia Organisation and other contributors."
 )
 
 deploydocs(
     repo = "github.com/BioJulia/BioTools.jl.git",
-    julia = "0.6",
+    julia = "0.7",
     osname = "linux",
     target = "build",
     deps = nothing,

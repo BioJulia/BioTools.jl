@@ -4,6 +4,9 @@
  [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/BioJulia/BioTools.jl/blob/master/LICENSE)
  [![Stable documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://biojulia.github.io/BioTools.jl/stable)
  [![Latest documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://biojulia.github.io/BioTools.jl/latest)
+![Lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg?style=flat-square)
+[![Chat on Discord](https://img.shields.io/badge/discord-chat-blue.svg?style=flat-square&logo=discord&colorB=%237289DA)](https://discord.gg/z73YNFz)
+
 
 ## Description
 
