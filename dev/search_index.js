@@ -9,9 +9,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "#img-src\"./sticker.svg\"-width\"30%\"-align\"right\"-/-BioTools-1",
+    "location": "#BioTools-1",
     "page": "Home",
-    "title": "<img src=\"./sticker.svg\" width=\"30%\" align=\"right\" /> BioTools",
+    "title": "BioTools",
     "category": "section",
     "text": "(Image: Latest Release)  (Image: MIT license)  (Image: Stable documentation)  (Image: Latest documentation) (Image: Lifecycle) (Image: Chat on Discord)"
 },
