@@ -10,4 +10,4 @@ BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
 EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
 
 [compat]
-julia = "0.7"
+julia = "1.0"

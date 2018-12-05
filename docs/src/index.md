@@ -1,4 +1,4 @@
-# <img src="./sticker.svg" width="30%" align="right" /> BioTools
+# BioTools
 
  [![Latest Release](https://img.shields.io/github/release/BioJulia/BioTools.jl.svg)](https://github.com/BioJulia/BioTools.jl/releases/latest)
  [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/BioJulia/BioTools.jl/blob/master/LICENSE)

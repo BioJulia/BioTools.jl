@@ -5,7 +5,6 @@ os:
   - osx
 
 julia:
-  - 0.7
   - 1.0
   - nightly
 
@@ -28,5 +27,15 @@ before_install:
     fi
 
 after_success:
-  - julia -e 'cd(using Pkg; Pkg.dir("BioTools")); Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
-  - julia --color=yes -e 'import BioTools; cd(dirname(dirname(pathof(BioTools)))); include(joinpath("docs", "make.jl"))'
+  - julia --project=coverage/ -e 'using Pkg; Pkg.instantiate()'
+  - julia --project=coverage/ coverage/coverage.jl
+
+jobs:
+  include:
+    - stage: "Documentation"
+      julia: 1.0
+      os: linux
+      script:
+        - julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+        - julia --project=docs/ docs/make.jl
+      after_success: skip

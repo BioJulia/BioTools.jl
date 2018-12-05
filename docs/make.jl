@@ -1,8 +1,11 @@
-using Documenter, BioTools, BioSymbols
+using Documenter, BioTools
 
 makedocs(
     format = :html,
+    modules = [BioTools.BLAST],
     sitename = "BioTools.jl",
+    doctest = false,
+    strict = false,
     pages = [
         "Home" => "index.md",
         "BLAST" => "blast.md"
@@ -12,9 +15,6 @@ makedocs(
 
 deploydocs(
     repo = "github.com/BioJulia/BioTools.jl.git",
-    julia = "0.7",
-    osname = "linux",
-    target = "build",
     deps = nothing,
     make = nothing
 )
