@@ -117,6 +117,11 @@ function blastn(query::Vector{DNASequence}, subject::AbstractString, flags=[]; d
     end
 end
 
+function blastn(query::AbstractString, subject::Vector{DNASequence}, flags=[])
+    subjectpath = makefasta(subject)
+    return blastn(query, subjectpath, flags)
+end
+
 """
 `blastp(query, subject, flags...)``
 Runs blastn on `query` against `subject`.
@@ -164,6 +169,11 @@ function blastp(query::Vector{AminoAcidSequence}, subject::AbstractString, flags
     else
         return blastp(querypath, subject, flags)
     end
+end
+
+function blastp(query::AbstractString, subject::Vector{AminoAcidSequence}, flags=[])
+    subjectpath = makefasta(subject)
+    return blastp(query, subjectpath, flags)
 end
 
 # Create temporary fasta-formated file for blasting.
