@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Allow `blastn` and `blastp` to run a `Vector{BioSequence}` against a file or database
 
 ## [v1.0.0] - 2018-12-11
 - Adds support to Julia 1.0
