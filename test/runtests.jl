@@ -33,6 +33,7 @@ if !Sys.iswindows()  # temporarily disable the BLAST tests on Windows (issue: #1
     @test typeof(blastn(na1, nucldb, db=true)) == Array{BLASTResult, 1}
     @test typeof(blastn(na1, fna)) == Array{BLASTResult, 1}
     @test typeof(blastn(fna, nucldb, db=true)) == Array{BLASTResult, 1}
+    @test typeof(blastn([na1, na2], nucldb, db=true)) == Array{BLASTResult, 1}
 end
 
 @testset "BLAST+ blastp" begin
@@ -56,6 +57,7 @@ end
     @test typeof(blastp(aa1, protdb, db=true)) == Array{BLASTResult, 1}
     @test typeof(blastp(aa1, faa)) == Array{BLASTResult, 1}
     @test typeof(blastp(faa, protdb, db=true)) == Array{BLASTResult, 1}
+    @test typeof(blastp([aa1, aa2], protdb, db=true)) == Array{BLASTResult, 1}
 end
 
 end  # if !is_windows()
