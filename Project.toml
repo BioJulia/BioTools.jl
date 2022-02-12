@@ -1,7 +1,7 @@
 name = "BioTools"
-uuid = "6631239a-b2a9-11e8-0104-a58b323c83c6"
-authors = ["Ben J. Ward <ward9250@gmail.com>"]
-version = "0.2.0"
+uuid = "fa51a905-6db9-5d43-b62f-5461347a870a"
+authors = ["Sabrina J. Ward <sabrinajward@protonmail.com>"]
+version = "1.1.0"
 
 [deps]
 BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
@@ -10,4 +10,14 @@ BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
 EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
 
 [compat]
-julia = "1.0"
+BioAlignments = "1"
+BioCore = "2"
+BioSequences = "1"
+EzXML = "0.9, 1"
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
