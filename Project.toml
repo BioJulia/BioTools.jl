@@ -1,7 +1,7 @@
 name = "BioTools"
 uuid = "fa51a905-6db9-5d43-b62f-5461347a870a"
 authors = ["Sabrina J. Ward <sabrinajward@protonmail.com>"]
-version = "1.1.0"
+version = "1.2.0"
 
 [deps]
 BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"

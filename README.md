@@ -1,3 +1,10 @@
+> [!WARNING]  
+> This package is old and no longer maintained.
+> Use https://github.com/BioJulia/NCBIBlast.jl/ for BLAST functionality instead
+
+[![Project Status: Abandoned – Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development.](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+
+
 # <img src="./sticker.svg" width="30%" align="right" /> BioTools
 
  [![Latest Release](https://img.shields.io/github/release/BioJulia/BioTools.jl.svg?style=flat-square)](https://github.com/BioJulia/BioTools.jl/releases/latest)
